@@ -10,8 +10,7 @@
 		4A2082852485796C009967B9 /* GoogleGallery.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2082832485796C009967B9 /* GoogleGallery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A20828E248579AA009967B9 /* GoogleGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A20828D248579AA009967B9 /* GoogleGallery.swift */; };
 		4A20829324857DE1009967B9 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A20829224857DE1009967B9 /* GalleryCell.swift */; };
-		4A20829524857E96009967B9 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A20829424857E96009967B9 /* NibView.swift */; };
-		4A208297248581EF009967B9 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A208296248581EF009967B9 /* UIView+.swift */; };
+		4A5C13A8248C4D5B001BA99D /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5C13A7248C4D5A001BA99D /* UIView+.swift */; };
 		4AA1E14724898087006137E7 /* TestAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AA1E14624898087006137E7 /* TestAsset.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -21,8 +20,7 @@
 		4A2082842485796C009967B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A20828D248579AA009967B9 /* GoogleGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleGallery.swift; sourceTree = "<group>"; };
 		4A20829224857DE1009967B9 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
-		4A20829424857E96009967B9 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
-		4A208296248581EF009967B9 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		4A5C13A7248C4D5A001BA99D /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+.swift"; path = "Extension/UIView+.swift"; sourceTree = "<group>"; };
 		4AA1E14624898087006137E7 /* TestAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAsset.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,11 +54,11 @@
 		4A2082822485796C009967B9 /* GoogleGallery */ = {
 			isa = PBXGroup;
 			children = (
+				4A5C13A7248C4D5A001BA99D /* UIView+.swift */,
 				4A2082832485796C009967B9 /* GoogleGallery.h */,
 				4A2082842485796C009967B9 /* Info.plist */,
 				4A20828D248579AA009967B9 /* GoogleGallery.swift */,
 				4AA1E14624898087006137E7 /* TestAsset.xcassets */,
-				4A208298248581F8009967B9 /* Extension */,
 				4A20829124857DCC009967B9 /* GalleryCell */,
 			);
 			path = GoogleGallery;
@@ -72,15 +70,6 @@
 				4A20829224857DE1009967B9 /* GalleryCell.swift */,
 			);
 			path = GalleryCell;
-			sourceTree = "<group>";
-		};
-		4A208298248581F8009967B9 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				4A20829424857E96009967B9 /* NibView.swift */,
-				4A208296248581EF009967B9 /* UIView+.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,10 +153,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A208297248581EF009967B9 /* UIView+.swift in Sources */,
+				4A5C13A8248C4D5B001BA99D /* UIView+.swift in Sources */,
 				4A20829324857DE1009967B9 /* GalleryCell.swift in Sources */,
 				4A20828E248579AA009967B9 /* GoogleGallery.swift in Sources */,
-				4A20829524857E96009967B9 /* NibView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

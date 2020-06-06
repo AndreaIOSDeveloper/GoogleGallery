@@ -20,6 +20,7 @@ import UIKit
         stack.spacing = 0
         return stack
     }()
+    
     private var containerStack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
@@ -91,10 +92,10 @@ import UIKit
     }
     
     private func setStack() {
-        externalStack.addArrangedSubview(containerStack)
         containerStack.addArrangedSubview(titleLabel)
         containerStack.addArrangedSubview(detailLabel)
         containerStack.addArrangedSubview(subDetailLabel)
+        externalStack.addArrangedSubview(containerStack)
         externalStack.addArrangedSubview(collectionGalleryView)
     }
 }

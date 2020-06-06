@@ -16,8 +16,8 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "GoogleGallery"
-  spec.version      = "v1.1"
-  spec.summary      = "GoogleGallery is a gallery in IOS where you can put your photos."
+  spec.version      = "1.2"
+  spec.summary      = "GoogleGallery is a gallery in iOS where you can put your photos."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -38,7 +38,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license        = { :type => "MIT", :file => "LICENSE" }
+  spec.license        = { :type => "MIT", :file => "README.md" }
   # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -81,8 +81,8 @@ Pod::Spec.new do |spec|
   #
 
   # spec.source            = { :path => '.' }
-   spec.source       = { :git => "https://github.com/AndreaDiFrancia/GoogleGallery.git", :tag => "1.1" }
-   spec.source_files  = "SwiftyLib/**/*.{h,m,swift}"
+   spec.source       = { :git => "https://github.com/AndreaDiFrancia/GoogleGallery.git", :tag => spec.version.to_s }
+   spec.source_files  = "GoogleGallery/**/*.{h,m,swift}"
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -92,8 +92,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "GoogleGallery"
-  spec.exclude_files = "Classes/Exclude"
+  #spec.source_files  = "GoogleGallery"
+  #spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 

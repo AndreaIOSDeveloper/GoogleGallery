@@ -24,7 +24,7 @@ pod install GoogleGallery
 ```
 	
 ## Features
-Insert in the terminal install pod file Googlegallery
+This component allows you to emulate the behavior of the Google gallery, you can go to insert your photos and descriptions according to your needs.
 	
 ## Usage
 ```

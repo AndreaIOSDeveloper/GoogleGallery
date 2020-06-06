@@ -11,6 +11,7 @@
 ## Customize your Gallery
 * [Installation](#installation)
 * [Features](#features)
+* [Usage](#usage)
 * [Enjoy](#setup)
 * [FAQ](#faq)
 * [Support](#support)
@@ -25,7 +26,14 @@ pod install Googlegallery
 ## Features
 Insert in the terminal install pod file Googlegallery
 	
-  
+## Usage
+```
+googleView.configure
+googleView.images
+googleView.sizeItemGallery
+googleView.minimumItemLineSpacing
+```
+
 ## Technologies
 Project is created with:
 * version: 1.1

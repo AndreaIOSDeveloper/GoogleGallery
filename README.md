@@ -20,7 +20,7 @@
 ## Installation
 Insert in the terminal install pod file Googlegallery
 ```bash
-pod install Googlegallery
+pod install GoogleGallery
 ```
 	
 ## Features

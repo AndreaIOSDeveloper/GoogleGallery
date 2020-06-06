@@ -1,5 +1,7 @@
 # GoogleGallery
 
+![](GoogleComponents.gif)
+
 ## Customize your Gallery
 * [Installation](#installation)
 * [Features](#features)

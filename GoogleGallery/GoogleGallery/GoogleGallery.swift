@@ -10,14 +10,40 @@ import Foundation
 import UIKit
 
 @IBDesignable public class GoogleGallery: UIView {
-    // IBOutlet
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var detailLabel: UILabel!
-    @IBOutlet private weak var subDetailLabel: UILabel!
-    @IBOutlet private weak var containerStack: UIStackView!
-    @IBOutlet private weak var mainStack: UIStackView!
-    
     // Private Variable
+
+    private var externalStack: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        stack.alignment = .fill
+        stack.distribution = .fill
+        stack.spacing = 0
+        return stack
+    }()
+    private var containerStack: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.alignment = .leading
+        stack.distribution = .fillEqually
+        stack.spacing = 4
+        return stack
+    }()
+    
+    private var titleLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    private var detailLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    private var subDetailLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
     lazy private var collectionGalleryView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         //layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize //CGSize(width: 100, height: 100)
@@ -43,7 +69,7 @@ import UIKit
 
         loadNib()
         
-        mainStack.addArrangedSubview(collectionGalleryView)
+        setStack()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -51,7 +77,7 @@ import UIKit
 
         loadNib()
         
-        mainStack.addArrangedSubview(collectionGalleryView)
+        setStack()
     }
     
     public func configure (title: String, detail: String, subDetail: String) {
@@ -66,6 +92,14 @@ import UIKit
     
     public func reloadData() {
         collectionGalleryView.reloadData()
+    }
+    
+    private func setStack() {
+        externalStack.addArrangedSubview(containerStack)
+        containerStack.addArrangedSubview(titleLabel)
+        containerStack.addArrangedSubview(detailLabel)
+        containerStack.addArrangedSubview(subDetailLabel)
+        externalStack.addArrangedSubview(collectionGalleryView)
     }
 }
 

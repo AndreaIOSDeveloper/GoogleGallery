@@ -1,5 +1,10 @@
 # GoogleGallery
 
+<img src="https://img.shields.io/github/v/tag/AndreaDiFrancia/GoogleGallery"> <img src="https://camo.githubusercontent.com/6aa54765065588bea4f609e058bf2e05c5783090/68747470733a2f2f696d672e736869656c64732e696f2f636f636f61706f64732f702f496d61676555492e7376673f7374796c653d666c6174" alt="Platform" data-canonical-src="https://img.shields.io/cocoapods/p/ImageUI.svg?style=flat" style="max-width:100%;"> 
+
+                                      
+					
+
 ![](GoogleComponents.gif)
 
 ## Customize your Gallery

@@ -9,22 +9,31 @@
 ![](GoogleComponents.gif)
 
 ## Customize your Gallery
+* [Requirements](#requirements)
 * [Installation](#installation)
 * [Features](#features)
 * [Usage](#usage)
-* [Enjoy](#setup)
-* [FAQ](#faq)
-* [Support](#support)
+* [Contributing](#contributing)
 * [License](#license)
+
+## Requirements
+* iOS 12.1+
+* Xcode 11+
+* Swift 5.1+
 
 ## Installation
 Insert in the terminal install pod file Googlegallery
 ```bash
-pod install GoogleGallery
+pod 'GoogleGallery'
 ```
 	
 ## Features
 This component allows you to emulate the behavior of the Google gallery, you can go to insert your photos and descriptions according to your needs.
+
+Next steps:
+- [x] create the gallery
+- [ ] customize the addition of labels
+- [ ] add buttons and other views
 	
 ## Usage
 ```
@@ -34,11 +43,16 @@ googleView.sizeItemGallery
 googleView.minimumItemLineSpacing
 ```
 
-## Technologies
-Project is created with:
-* version: 1.1
-
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Please refer to each project's style and contribution guidelines for submitting patches and additions. In general, we follow the "fork-and-pull" Git workflow.
 
-Please make sure to update tests as appropriate.
+1. Fork the repo on GitHub
+2. Clone the project to your own machine
+3. Commit changes to your own branch
+4. Push your work back up to your fork
+5. Submit a Pull request so that we can review your changes
+
+NOTE: Be sure to merge the latest from "upstream" before making a pull request!
+
+## License
+GoogleGallery is released under the MIT license. See LICENSE for details.

@@ -11,9 +11,10 @@ import UIKit
 
 @IBDesignable public class GoogleGallery: UIView {
     // Private Variable
-
     private var externalStack: UIStackView = {
         let stack = UIStackView()
+        stack.frame = CGRect(origin: .zero, size: CGSize(width: 100, height: 100))
+        stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
         stack.alignment = .fill
         stack.distribution = .fill
@@ -23,6 +24,7 @@ import UIKit
     
     private var containerStack: UIStackView = {
         let stack = UIStackView()
+        stack.frame = CGRect(origin: .zero, size: CGSize(width: 100, height: 100))
         stack.axis = .vertical
         stack.alignment = .leading
         stack.distribution = .fillEqually
@@ -67,17 +69,25 @@ import UIKit
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        print("init2")
         setStack()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
+        print("init2")
+        setStack()
+    }
+    
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+        print("awakeFromNib")
+
         setStack()
     }
     
     public func configure (title: String, detail: String, subDetail: String) {
+        print("configure")
         titleLabel.text = title
         detailLabel.text = detail
         subDetailLabel.text = subDetail
@@ -92,6 +102,13 @@ import UIKit
     }
     
     private func setStack() {
+        print("setStack")
+        self.addSubview(externalStack)
+        externalStack.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        externalStack.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        externalStack.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        externalStack.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+                
         containerStack.addArrangedSubview(titleLabel)
         containerStack.addArrangedSubview(detailLabel)
         containerStack.addArrangedSubview(subDetailLabel)

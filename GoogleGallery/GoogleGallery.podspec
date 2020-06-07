@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "GoogleGallery"
-  spec.version      = "1.4"
+  spec.version      = "1.5"
   spec.summary      = "GoogleGallery is a gallery in iOS where you can put your photos."
 
   # This description is used to generate tags and improve search results.

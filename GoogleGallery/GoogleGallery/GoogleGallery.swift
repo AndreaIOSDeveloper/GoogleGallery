@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+public protocol GoogleGalleryDelegate: class {
+    func googleGallery(collectionView: UICollectionView, didSelect image: UIImage)
+}
+
 @IBDesignable public class GoogleGallery: UIView {
     // Private Variable
     private var externalStack: UIStackView = {
@@ -25,10 +29,11 @@ import UIKit
     private var containerStack: UIStackView = {
         let stack = UIStackView()
         stack.frame = CGRect(origin: .zero, size: CGSize(width: 100, height: 100))
+        stack.layoutMargins = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
         stack.axis = .vertical
         stack.alignment = .leading
         stack.distribution = .fillEqually
-        stack.spacing = 4
+        stack.spacing = 0
         return stack
     }()
     
@@ -46,6 +51,8 @@ import UIKit
         let label = UILabel()
         return label
     }()
+    
+    weak var delegate: GoogleGalleryDelegate?
     
     lazy private var collectionGalleryView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -97,6 +104,22 @@ import UIKit
         collectionGalleryView.backgroundColor = backgroundColor
     }
     
+    /// This function  `setStacks`.
+    ///
+    /// ```
+    /// setStacks(with externalStackSpacing: CGFloat, containerStackSpacing: CGFloat)
+    /// ```
+    ///
+    /// - Warning: The returned string is not localized.
+    /// - Parameter subject: The subject to be welcomed.
+    /// - Returns: A hello string to the `subject`.
+    public func setStacks(with externalStackSpacing: CGFloat = 0, containerStackSpacing: CGFloat = 0) {
+        externalStack.spacing = externalStackSpacing
+        containerStack.spacing = containerStackSpacing
+    }
+    
+    /// This function reload data inside a collectionView `reloadData`.
+    ///
     public func reloadData() {
         collectionGalleryView.reloadData()
     }
@@ -127,6 +150,10 @@ extension GoogleGallery: UICollectionViewDelegate, UICollectionViewDataSource {
           
         cell?.configure(image: images[indexPath.item])
         return cell ?? UICollectionViewCell()
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.googleGallery(collectionView: collectionView, didSelect: images[indexPath.item])
     }
     
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
